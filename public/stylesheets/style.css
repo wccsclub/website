@@ -1,0 +1,92 @@
+body {
+  min-height: 75rem;
+  padding-top: 6.5rem;
+  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  background: Azure;
+}
+
+.navbar, .dropdown-menu{
+background:rgba(137,153,168,0.8);
+border: none;
+display: inline-block;
+}
+
+.navbar-brand .nav{
+  display: inline-block;
+}
+
+.nav>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .dropdown-menu>li>a, .dropdown-menu>li{
+  border-bottom: 3px solid transparent;
+}
+.nav>li>a:focus, .nav>li>a:hover,.nav .open>a, .nav .open>a:focus, .nav .open>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+  border-bottom: 3px solid transparent;
+  background: none;
+}
+.navbar a, .dropdown-menu>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .navbar-toggle{
+ color: #fff;
+}
+.dropdown-menu{
+      -webkit-box-shadow: none;
+    box-shadow:none;
+}
+
+.nav li:hover:nth-child(8n+1), .nav li.active:nth-child(8n+1){
+  border-bottom: #C4E17F 3px solid;
+}
+.nav li:hover:nth-child(8n+2), .nav li.active:nth-child(8n+2){
+  border-bottom: #F7FDCA 3px solid;
+}
+.nav li:hover:nth-child(8n+3), .nav li.active:nth-child(8n+3){
+  border-bottom: #FECF71 3px solid;
+}
+.nav li:hover:nth-child(8n+4), .nav li.active:nth-child(8n+4){
+  border-bottom: #F0776C 3px solid;
+}
+.nav li:hover:nth-child(8n+5), .nav li.active:nth-child(8n+5){
+  border-bottom: #DB9DBE 3px solid;
+}
+.nav li:hover:nth-child(8n+6), .nav li.active:nth-child(8n+6){
+  border-bottom: #C49CDE 3px solid;
+}
+.nav li:hover:nth-child(8n+7), .nav li.active:nth-child(8n+7){
+  border-bottom: #669AE1 3px solid;
+}
+.nav li:hover:nth-child(8n+8), .nav li.active:nth-child(8n+8){
+  border-bottom: #62C2E4 3px solid;
+}
+
+.navbar-toggle .icon-bar{
+    color: #fff;
+    background: #fff;
+}
+
+.container {
+  text-align: center;
+  padding-left: 10%;
+  margin: 0;
+}
+
+.section {
+  width: 100%;
+  height: auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  position: relative;
+}
+
+.deep {
+  background-color: #92D2EE;
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  margin: 0;
+}
+
+.subtitle {
+  border: 2px solid black;
+  padding: .3em;
+}
+
+.col-xs-12 {
+  padding: 0;
+}
