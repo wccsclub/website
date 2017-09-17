@@ -2,7 +2,7 @@ body {
   min-height: 75rem;
   padding-top: 6.5rem;
   font: 16px "Open Sans", Helvetica, Arial, sans-serif;
-  background: Azure;
+  background: linear-gradient(to bottom right, #C39BD3, #5DADE2);;
 }
 
 .navbar, .dropdown-menu{
