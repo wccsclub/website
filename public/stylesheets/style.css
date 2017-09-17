@@ -60,10 +60,10 @@ display: inline-block;
     background: #fff;
 }
 
-.container {
+.container-fluid {
   text-align: center;
-  padding-left: 10%;
-  margin: 0;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .section {
