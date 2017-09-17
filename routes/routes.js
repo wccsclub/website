@@ -37,6 +37,10 @@ router.get('/eboard', function(req, res) {
   res.render('eboard');
 })
 
+router.get('/calendar', function(req, res) {
+  res.render('calendar');
+})
+
 router.get('/', function(req, res, next) {
   res.render('home');
 });
