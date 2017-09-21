@@ -74,10 +74,11 @@ display: inline-block;
   padding-top: 25px;
   padding-bottom: 25px;
   position: relative;
+  color: Azure;
 }
 
 .deep {
-  background-color: #92D2EE;
+  background-color: rgb(9, 52, 80);
   text-align: center;
   padding-left: 20%;
   padding-right: 20%;
@@ -85,7 +86,7 @@ display: inline-block;
 }
 
 .subtitle {
-  border: 2px solid black;
+  border: 2px solid Azure;
   padding: .3em;
 }
 
