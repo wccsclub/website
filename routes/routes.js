@@ -28,8 +28,8 @@ router.post("/message", function(req, res) {
   var data = req.body;
   console.log("DATA", data);
     // setup email data with unicode symbols
-  var smtpTransport = nodemailer.createTransport(process.env.TRANSPORTER);
   console.log("ENV", process.env.TRANSPORTER);
+  var smtpTransport = nodemailer.createTransport(process.env.TRANSPORTER);
   let mailOptions = {
       from: req.body.name + '<wellesleywcc@gmail.com>', // sender address
       // to: 'cs-club-eboard@wellesley.edu',
