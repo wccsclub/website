@@ -194,8 +194,10 @@ body {
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
   <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+  <a href="#calendar" onclick="w3_close()" class="w3-bar-item w3-button">CALENDAR</a>
+  <a href="#resource" onclick="w3_close()" class="w3-bar-item w3-button">RESOURCE</a>
+  <a target="_blank" href="http://wellesleyhacks.org/" onclick="w3_close()" class="w3-bar-item w3-button">WHACK</a>
+  <a href="#store" onclick="w3_close()" class="w3-bar-item w3-button">STORE</a>
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 </nav>
 
@@ -203,11 +205,11 @@ body {
 <header class="background w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-middle w3-text-white">
     <div class="align-center" >
-      <h1 class="w3-jumbo w3-hide-small col-xs-12"><b>Wellesley</b></h1>
-      <h1 class="w3-jumbo w3-hide-small col-xs-12"><b>CS Club</b></h1>
+      <h1 class="w3-jumbo w3-hide-small col-xs-12 w3-animate-zoom"><b>Wellesley</b></h1>
+      <h1 class="w3-jumbo w3-hide-small col-xs-12 w3-animate-zoom"><b>CS Club</b></h1>
       <span class="w3-xxlarge w3-hide-large w3-hide-medium"><b>Wellesley CS Club</b></span><br>
       <span class="w3-large col-xs-12">Enrich Wellesley community's Computer Science experience beyond the CS curriculum.</span><br>
-      <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-blue"><b>Learn more</b></a></p>
+      <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-blue"><b><i class="fa fa-arrow-down w3-margin-right"></i>Learn more</b></a></p>
     </div>
   </div>
 </header>
@@ -219,22 +221,28 @@ body {
   <div class="col-xs-2"></div>
   <div class="col-xs-8 align-center" style="border: 1px dashed grey;">
     <h5 style="color:grey;"><i>Wellesley CS Club is established to provide a forum for events within the CS major/minor community and to provide opportunities for enrichment through tech-related events</i></h5>
-  </div><br><br><br>
+  </div>
+  <div>
+    <br><br><br>
+  </div>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
-    <div class="col-xs-4">
+    <div class="col-md-4 col-xs-12">
       <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
       <p class="w3-large">Workshop</p>
       <p>Explore industry related workshops/job opportunities</p>
+      <br>
     </div>
-    <div class="col-xs-4">
+    <div class="col-md-4 col-xs-12">
       <i class="fa fa-users w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">Social Event</p>
       <p>Connect with other CS/MAS students and professors to build a stronger community among ourselves</p>
+      <br>
     </div>
-    <div class="col-xs-4">
+    <div class="col-md-4 col-xs-12">
       <i class="fa fa-wrench w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">WHACK</p>
       <p>Build projects, have fun, be creative, break, learn, and ask questions in a space that celebrates diversity</p>
+      <br>
     </div>
   </div>
 </div>
@@ -575,7 +583,7 @@ body {
   <div class="col-xs-8">
       <!-- <div class="get-in-touch"> -->
         <h1 class="title">CONTACT</h1><br>
-        <form class="contact-form row" action="/message" method="post">
+        <form class="contact-form row" action="/" method="get">
           <div class="form-field col x-50">
             <input id="name" class="input-text js-input" type="text" required>
             <label class="label" for="name">Name</label>
