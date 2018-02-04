@@ -3,6 +3,7 @@ var router = express.Router();
 var models = require('../models');
 var Member = models.Member;
 var mandrill = require('node-mandrill')('<Your Api Key Here>');
+const nodemailer = require("nodemailer");
 //////////////////////////////// PUBLIC ROUTES ////////////////////////////////
 // Users who are not logged in can see these routes
 
@@ -23,9 +24,34 @@ var mandrill = require('node-mandrill')('<Your Api Key Here>');
 //     })
 // })
 
-router.post('/message', function(req, res) {
-  res.render('home');
+router.post("/message", function(req, res) {
+  var data = req.body;
+  console.log("DATA", data);
+  // setup email data with unicode symbols
+  var smtpTransport = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
+  console.log('SMTP', smtpTransport);
+  let mailOptions = {
+      from: '"//name" <//username@gmail.com>', // sender address
+      to: // receiver: CS Club
+      subject: 'Message for CS Club', // Subject line
+      text: req.body.message, // plain text body
+      html: '<p>' + req.body.message + '</p>' // html body
+  };
+  console.log('OPTIONS', mailOptions);
+
+  // send mail with defined transport object
+  smtpTransport.sendMail(mailOptions, (err, info) => {
+    console.log('IN SENDMAIL');
+    if (err){
+      console.log("ERROR", err);
+    } else{
+      console.log("Message SENT: " + res.message);
+    }
+    smtpTransport.close();
+  });
 });
+
+
 
 router.get('/eboard', function(req, res) {
   // Member.find()
