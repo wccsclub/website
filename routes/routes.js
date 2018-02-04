@@ -23,6 +23,10 @@ var Member = models.Member;
 //     })
 // })
 
+router.post('/message', function(req, res) {
+  res.render('home');
+});
+
 router.get('/eboard', function(req, res) {
   // Member.find()
   //   .then(members => {

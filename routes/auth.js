@@ -43,6 +43,10 @@ module.exports = function(passport) {
     failureRedirect: '/login'
   }));
 
+  router.get('/protected', function(req, res) {
+    res.render('protectedRoute');
+  });
+
   // GET Logout page
   router.get('/logout', function(req, res) {
     req.logout();
