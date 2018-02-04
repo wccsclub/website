@@ -32,6 +32,7 @@ router.post("/message", function(req, res) {
   let mailOptions = {
       from: req.body.name + '<wellesleywcc@gmail.com>', // sender address
       to: 'cs-club-eboard@wellesley.edu',
+      // to: "slu5@wellesley.edu",
       subject: 'Message for CS Club', // Subject line
       text: 'You received a new message from ' + req.body.name + ':\n' + req.body.message + '\n Contact her at ' + req.body.email, // plain text body
       html: '<p>You received a new message from ' + req.body.name + ':</p><p>' + req.body.message + '</p><p>Contact her at ' + req.body.email + '</p>' // html body
