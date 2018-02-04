@@ -3,6 +3,7 @@ var router = express.Router();
 var models = require('../models');
 var Member = models.Member;
 var mandrill = require('node-mandrill')('<Your Api Key Here>');
+const nodemailer = require("nodemailer");
 //////////////////////////////// PUBLIC ROUTES ////////////////////////////////
 // Users who are not logged in can see these routes
 
@@ -23,9 +24,34 @@ var mandrill = require('node-mandrill')('<Your Api Key Here>');
 //     })
 // })
 
-router.post('/message', function(req, res) {
-  res.render('home');
+router.post("/message", function(req, res) {
+  var data = req.body;
+  console.log("DATA", data);
+    // setup email data with unicode symbols
+  console.log("ENV", process.env.TRANSPORTER);
+  var smtpTransport = nodemailer.createTransport(process.env.TRANSPORTER);
+  let mailOptions = {
+      from: req.body.name + '<wellesleywcc@gmail.com>', // sender address
+      // to: 'cs-club-eboard@wellesley.edu',
+      to: "slu5@wellesley.edu",
+      subject: 'Message for CS Club', // Subject line
+      text: 'You received a new message from ' + req.body.name + ':\n' + req.body.message + '\n Contact her at ' + req.body.email, // plain text body
+      html: '<p>You received a new message from ' + req.body.name + ':</p><p>' + req.body.message + '</p><p>Contact her at ' + req.body.email + '</p>' // html body
+  };
+
+  // send mail with defined transport object
+  smtpTransport.sendMail(mailOptions, (err, info) => {
+    console.log('IN SENDMAIL');
+    if (err){
+      console.log("ERROR", err);
+    } else{
+      console.log("Message SENT: " + res.message);
+    }
+    smtpTransport.close();
+  });
 });
+
+
 
 router.get('/eboard', function(req, res) {
   // Member.find()
