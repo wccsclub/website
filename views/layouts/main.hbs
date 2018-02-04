@@ -167,7 +167,7 @@ body {
 }
 .contact-form .submit-btn {
   display: inline-block;
-  background-color: #000;
+  background-color: grey;
   color: #fff;
   font-family: Raleway, sans-serif;
   text-transform: uppercase;
@@ -208,13 +208,13 @@ body {
     <a href="#home" class="w3-bar-item w3-wide"><img src="https://image.ibb.co/mGALw5/logo_nobg.png" height="35"></a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#team" class="w3-bar-item w3-button">TEAM</a>
-      <a href="#calendar" class="w3-bar-item w3-button">CALENDAR</a>
-      <a href="#resource" class="w3-bar-item w3-button">RESOURCE</a>
-      <a target="_blank" href="http://wellesleyhacks.org/" class="w3-bar-item w3-button">WHACK</a>
-      <a href="#store" class="w3-bar-item w3-button">STORE</a>
-      <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+      <a href="#about" class="w3-bar-item w3-button w3-hover-light-blue">ABOUT</a>
+      <a href="#team" class="w3-bar-item w3-button w3-hover-light-blue">TEAM</a>
+      <a href="#calendar" class="w3-bar-item w3-button w3-hover-light-blue">CALENDAR</a>
+      <a href="#resource" class="w3-bar-item w3-button w3-hover-light-blue">RESOURCE</a>
+      <a target="_blank" href="http://wellesleyhacks.org/" class="w3-bar-item w3-button w3-hover-light-blue">WHACK</a>
+      <a href="#store" class="w3-bar-item w3-button w3-hover-light-blue">STORE</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-hover-light-blue">CONTACT</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -594,18 +594,18 @@ body {
         <form class="contact-form row" action="/message" method="post">
           <div class="form-field col x-50">
             <input id="name" name="name" class="input-text js-input" type="text" required>
-            <label class="label" for="name">Name</label>
+            <label class="label" for="name">Name *</label>
           </div>
           <div class="form-field col x-50">
             <input id="email" name="email" class="input-text js-input" type="email" required>
-            <label class="label" for="email">E-mail</label>
+            <label class="label" for="email">E-mail *</label>
           </div>
           <div class="form-field col x-100">
             <textarea id="message" name="message" class="input-text js-input" type="text" wrap="soft" required></textarea>
-            <label class="label" for="message">Message</label>
+            <label class="label" for="message">Message *</label>
           </div>
           <div class="form-field col x-100 align-center">
-            <input class="submit-btn" data-toggle="modal" data-target="#myModal" type="submit" value="Send Message!">
+            <input class="submit-btn w3-hover-light-blue" data-toggle="modal" data-target="#myModal" type="submit" value="Send Message!">
           </div>
         </form>
 
@@ -635,20 +635,10 @@ body {
   <div class="w3-xlarge w3-section">
     <a target="_blank" href="https://www.facebook.com/Wellesley-CS-Club-856871510992038/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
   </div>
-  <p>Made with  <i class="fa fa-heart"></i></p>
+  <p>Made with  <i class="fa fa-heart w3-hover-opacity"></i></p>
 </footer>
 
-<!-- Add Google Maps -->
 <script>
-// $( '.js-input' ).keyup(function() {
-//   if( $(this).val() ) {
-//      $(this).addClass('not-empty');
-//   } else {
-//      $(this).removeClass('not-empty');
-//   }
-// });
-
-
 
 // Toggle between showing and hiding the sidebar when clicking the menu icon
 var mySidebar = document.getElementById("mySidebar");

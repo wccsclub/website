@@ -38,6 +38,8 @@ router.post("/message", function(req, res) {
           pass: process.env.SMTP_PASS
       }
   });
+
+
   let mailOptions = {
       from: req.body.name + '<wellesleywcc@gmail.com>', // sender address
       to: 'cs-club-eboard@wellesley.edu',
