@@ -27,17 +27,15 @@ const nodemailer = require("nodemailer");
 router.post("/message", function(req, res) {
   var data = req.body;
   console.log("DATA", data);
-  // setup email data with unicode symbols
-  var smtpTransport = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
-  console.log('SMTP', smtpTransport);
+    // setup email data with unicode symbols
+  var smtpTransport = nodemailer.createTransport(process.env.TRANSPORTER);
   let mailOptions = {
-      from: '"//name" <//username@gmail.com>', // sender address
-      to: // receiver: CS Club
+      from: req.body.name + '<wellesleywcc@gmail.com>', // sender address
+      to: 'cs-club-eboard@wellesley.edu',
       subject: 'Message for CS Club', // Subject line
-      text: req.body.message, // plain text body
-      html: '<p>' + req.body.message + '</p>' // html body
+      text: 'You received a new message from ' + req.body.name + ':\n' + req.body.message + '\n Contact her at ' + req.body.email, // plain text body
+      html: '<p>You received a new message from ' + req.body.name + ':</p><p>' + req.body.message + '</p><p>Contact her at ' + req.body.email + '</p>' // html body
   };
-  console.log('OPTIONS', mailOptions);
 
   // send mail with defined transport object
   smtpTransport.sendMail(mailOptions, (err, info) => {
