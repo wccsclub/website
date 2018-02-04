@@ -49,6 +49,49 @@ body {
     min-height: 100%;
 }
 
+/*.googleCalendar{
+  position: relative;
+  height: 0;
+  width: 80%;
+  padding-bottom: 50%;
+}
+
+.googleCalendar iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}*/
+
+@media (max-width: 550px) {
+     .big-container {
+         display: none;
+     }
+ }
+ @media (min-width: 550px) {
+     .small-container {
+         display: none;
+     }
+ }
+ /* Responsive iFrame */
+ .responsive-iframe-container {
+     position: relative;
+     padding-bottom: 56.25%;
+     padding-top: 30px;
+     height: 0;
+     overflow: hidden;
+ }
+ .responsive-iframe-container iframe,
+ .vresponsive-iframe-container object,
+ .vresponsive-iframe-container embed {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+ }
+
 .w3-bar .w3-button {
     padding: 16px;
 }
@@ -218,12 +261,10 @@ body {
 <!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="about">
   <h2 class="w3-center"><b>ABOUT US</b> </h2><br>
-  <div class="col-xs-2"></div>
-  <div class="col-xs-8 align-center" style="border: 1px dashed grey;">
+  <div class="w3-center w3-large" style="margin:0 10% 0 10%">
+  <div class="align-center" style="border: 1px dashed grey;">
     <h5 style="color:grey;"><i>Wellesley CS Club is established to provide a forum for events within the CS major/minor community and to provide opportunities for enrichment through tech-related events</i></h5>
   </div>
-  <div>
-    <br><br><br>
   </div>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="col-md-4 col-xs-12">
@@ -496,8 +537,15 @@ body {
 
 <!-- Calendar Section -->
 <div class="container-fluid align-center" style="padding:80px 16px;" id="calendar">
-  <h2>Calendar</h2><br>
-  <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=wellesley.edu_g6am2uvlr6a10eam3ce705sp7c%40group.calendar.google.com&amp;color=%23333333&amp;ctz=America%2FNew_York" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  <h2>Events Calendar</h2><br>
+  <div style="margin:0 10% 0 10%">
+    <div class="responsive-iframe-container big-container">
+      <iframe src="https://calendar.google.com/calendar/embed?src=wellesley.edu_22kgeflomqpg8fbk7ofn3j8d74%40group.calendar.google.com&ctz=America%2FNew_York" style="border-width:0" width="100%" height="650" frameborder="0" scrolling="no"></iframe>
+    </div>
+  </div>
+  <div class="responsive-iframe-container small-container">
+    <iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;src=wellesley.edu_22kgeflomqpg8fbk7ofn3j8d74%40group.calendar.google.com&ctz=America%2FNew_York" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+  </div>
 </div>
 
 
@@ -579,8 +627,7 @@ body {
 
 <!-- Contact Section -->
 <div class="container-fluid w3-light-grey align-center" style="padding:128px 16px;" id="contact">
-  <div class="col-md-2 col-xs-1"></div>
-  <div class="col-md-8 col-xs-10">
+  <div style="margin:0 10% 0 10%">
       <!-- <div class="get-in-touch"> -->
         <h1 class="title">CONTACT</h1><br>
         <form class="contact-form row" action="/" method="get">
