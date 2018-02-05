@@ -43,12 +43,25 @@ body {
 .background {
     background-position: center;
     background-size: cover;
+    /*background-image: url("https://image.ibb.co/nfQkdx/18_BDCF39_D9_C6_4177_864_D_7_E4036_D98_B4_B.jpg");*/
     background-image: url("https://scontent.fbed1-1.fna.fbcdn.net/v/t1.0-9/10665876_856895040989685_6039973723728781614_n.jpg?oh=6f52682ec40726908fc15465f72be2f7&oe=5B2152D4");
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.1);
     background-blend-mode: lighten;
     /*opacity: 0.4;*/
     /*background-color: #66b3ff;*/
     min-height: 100%;
+}
+
+.heading {
+  line-height: 80px;
+  font-size: 75px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: -3px;
+  word-spacing: 10px;
+  color: #FFFFFF;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 
 
@@ -167,7 +180,7 @@ body {
 }
 .contact-form .submit-btn {
   display: inline-block;
-  background-color: #000;
+  background-color: grey;
   color: #fff;
   font-family: Raleway, sans-serif;
   text-transform: uppercase;
@@ -208,13 +221,13 @@ body {
     <a href="#home" class="w3-bar-item w3-wide" style="padding-top:0em !important; padding-bottom:0em !important"><img src="https://image.ibb.co/mGALw5/logo_nobg.png" height="59"></a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#team" class="w3-bar-item w3-button">TEAM</a>
-      <a href="#calendar" class="w3-bar-item w3-button">CALENDAR</a>
-      <a href="#resource" class="w3-bar-item w3-button">RESOURCE</a>
-      <a target="_blank" href="http://wellesleyhacks.org/" class="w3-bar-item w3-button">WHACK</a>
-      <a href="#store" class="w3-bar-item w3-button">STORE</a>
-      <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+      <a href="#about" class="w3-bar-item w3-button w3-hover-light-blue">ABOUT</a>
+      <a href="#team" class="w3-bar-item w3-button w3-hover-light-blue">TEAM</a>
+      <a href="#calendar" class="w3-bar-item w3-button w3-hover-light-blue">CALENDAR</a>
+      <a href="#resource" class="w3-bar-item w3-button w3-hover-light-blue">RESOURCE</a>
+      <a target="_blank" href="http://wellesleyhacks.org/" class="w3-bar-item w3-button w3-hover-light-blue">WHACK</a>
+      <a href="#store" class="w3-bar-item w3-button w3-hover-light-blue">STORE</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-hover-light-blue">CONTACT</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -239,11 +252,11 @@ body {
 <!-- Header with full-height image -->
 <header class="background w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-middle w3-text-white">
-    <div class="align-center" >
-      <h1 class="w3-jumbo w3-hide-small col-xs-12 w3-animate-zoom"><b>Wellesley</b></h1>
-      <h1 class="w3-jumbo w3-hide-small col-xs-12 w3-animate-zoom"><b>CS Club</b></h1>
+    <div class="align-center">
+      <h1 class="heading w3-hide-small col-xs-12 w3-animate-zoom"><b>Wellesley</b></h1>
+      <h1 class="heading w3-hide-small col-xs-12 w3-animate-zoom"><b>CS Club</b></h1>
       <span class="w3-xxlarge w3-hide-large w3-hide-medium"><b>Wellesley CS Club</b></span><br>
-      <span class="w3-large col-xs-12">Enrich Wellesley community's Computer Science experience beyond the CS curriculum.</span><br>
+      <span class="w3-large col-xs-12" style="color: #fff;text-shadow: 2px 2px 2px rgb(0, 0, 0);">Enrich Wellesley community's Computer Science experience beyond the CS curriculum.</span><br>
       <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-blue"><b><i class="fa fa-arrow-down w3-margin-right"></i>Learn more</b></a></p>
     </div>
   </div>
@@ -541,7 +554,7 @@ body {
 </div>
 
 
-<!-- Modal for full size images on click-->
+<!-- Modal on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
   <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
   <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
@@ -595,18 +608,19 @@ body {
         <form class="contact-form row" action="/message" method="post">
           <div class="form-field col x-50">
             <input id="name" name="name" class="input-text js-input" type="text" required>
-            <label class="label" for="name">Name</label>
+            <label class="label" for="name">Name *</label>
           </div>
           <div class="form-field col x-50">
             <input id="email" name="email" class="input-text js-input" type="email" required>
-            <label class="label" for="email">E-mail</label>
+            <label class="label" for="email">E-mail *</label>
           </div>
           <div class="form-field col x-100">
             <textarea id="message" name="message" class="input-text js-input" type="text" wrap="soft" required></textarea>
-            <label class="label" for="message">Message</label>
+            <label class="label" for="message">Message *</label>
           </div>
           <div class="form-field col x-100 align-center">
-            <input class="submit-btn" data-toggle="modal" data-target="#myModal" type="submit" value="Send Message!">
+            <!-- data-toggle="modal" data-target="#myModal" -->
+            <input class="submit-btn w3-hover-light-blue" type="submit" value="Send Message!">
           </div>
         </form>
 
@@ -636,20 +650,10 @@ body {
   <div class="w3-xlarge w3-section">
     <a target="_blank" href="https://www.facebook.com/Wellesley-CS-Club-856871510992038/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
   </div>
-  <p>Made with  <i class="fa fa-heart"></i></p>
+  <p>Made with  <i class="fa fa-heart w3-hover-opacity"></i></p>
 </footer>
 
-<!-- Add Google Maps -->
 <script>
-// $( '.js-input' ).keyup(function() {
-//   if( $(this).val() ) {
-//      $(this).addClass('not-empty');
-//   } else {
-//      $(this).removeClass('not-empty');
-//   }
-// });
-
-
 
 // Toggle between showing and hiding the sidebar when clicking the menu icon
 var mySidebar = document.getElementById("mySidebar");
@@ -673,6 +677,11 @@ function hover(element) {
 function unhover(element) {
     element.setAttribute('src', 'https://image.ibb.co/cxQyyx/sweatshirt1.jpg');
 }
+
+$("form").on('submit', function(){
+  console.log('SENT!!!');
+   $('#myModal').modal('show');
+})
 
 </script>
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script> -->
