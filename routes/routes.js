@@ -81,9 +81,9 @@ router.get('/calendar', function(req, res) {
   res.render('calendar');
 })
 
-router.get('/', function(req, res, next) {
-  res.render('home');
-});
+// router.get('/', function(req, res, next) {
+//   res.render('home');
+// });
 
 ///////////////////////////// END OF PUBLIC ROUTES /////////////////////////////
 
