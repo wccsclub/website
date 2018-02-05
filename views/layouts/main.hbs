@@ -554,7 +554,7 @@ body {
 </div>
 
 
-<!-- Modal for full size images on click-->
+<!-- Modal on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
   <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
   <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
@@ -619,7 +619,8 @@ body {
             <label class="label" for="message">Message *</label>
           </div>
           <div class="form-field col x-100 align-center">
-            <input class="submit-btn w3-hover-light-blue" data-toggle="modal" data-target="#myModal" type="submit" value="Send Message!">
+            <!-- data-toggle="modal" data-target="#myModal" -->
+            <input class="submit-btn w3-hover-light-blue" type="submit" value="Send Message!">
           </div>
         </form>
 
@@ -676,6 +677,11 @@ function hover(element) {
 function unhover(element) {
     element.setAttribute('src', 'https://image.ibb.co/cxQyyx/sweatshirt1.jpg');
 }
+
+$("form").on('submit', function(){
+  console.log('SENT!!!');
+   $('#myModal').modal('show');
+})
 
 </script>
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script> -->
