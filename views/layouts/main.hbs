@@ -213,6 +213,63 @@ body {
     transition: .3s ease all;
     font-family: 'Roboto', sans-serif;
 }
+
+/* LIST */
+/* Credit to: https://www.formget.com/css-lists/ */
+.list-type5{
+width:100%;
+margin:0 auto;
+}
+.list-type5 ol {
+list-style-type: none;
+list-style-type: decimal !ie; /*IE 7- hack*/
+margin: 0;
+margin-left: 1em;
+padding: 0;
+counter-reset: li-counter;
+}
+.list-type5 ol li{
+position: relative;
+margin-bottom: 1.5em;
+padding: 0.5em;
+background-color: #f8f8f8;
+padding-left: 58px;
+}
+
+.list-type5 a{
+text-decoration:none;
+color:black;
+font-size:15px;
+font-family: 'Raleway', sans-serif;
+}
+
+.list-type5 li:hover{
+box-shadow:inset -1em 0 #b19cd9;
+-webkit-transition: box-shadow 0.5s; /* For Safari 3.1 to 6.0 */
+transition: box-shadow 0.5s;
+}
+
+.list-type5 ol li:before {
+position: absolute;
+top: -0.3em;
+left: -0.5em;
+width: 1.8em;
+height: 1.2em;
+font-size: 2em;
+line-height: 1.2;
+font-weight: bold;
+text-align: center;
+color: white;
+background-color: #b19cd9;
+transform: rotate(-20deg);
+-ms-transform: rotate(-20deg);
+-webkit-transform: rotate(-20deg);
+/* z-index: 99; */
+overflow: hidden;
+content: counter(li-counter);
+counter-increment: li-counter;
+}
+
 </style>
 <body>
 <!-- Navbar -->
@@ -285,14 +342,14 @@ body {
       <br>
     </div>
     <div class="col-md-4 col-xs-12">
-      <i class="fa fa-wrench w3-margin-bottom w3-jumbo"></i>
+      <!-- <i class="fa fa-wrench w3-margin-bottom w3-jumbo"></i> -->
+      <img class="w3-margin-bottom" src="images/whack_logo.jpg" style="wide:59.44px; height:64px;">
       <p class="w3-large">WHACK</p>
       <p>Build projects, have fun, be creative, break, learn, and ask questions in a space that celebrates diversity</p>
       <br>
     </div>
   </div>
 </div>
-
 
 
 <!-- Team Section -->
@@ -581,17 +638,97 @@ body {
 <div class="container-fluid w3-light-grey align-center" style="padding:128px 16px;" id="resource">
   <div class="w3-row-padding">
     <h2>Resource</h2>
-    <p>#Under Construction</p>
-    <!-- <div class="w3-col m6">
-      <h3>Our Resource.</h3>
-      <p>1</p>
-      <p>2</p>
-    </div> -->
-    <!-- <div class="w3-col m6">
-      <p class="w3-wide"><i class="fa fa-camera w3-margin-right"></i>123</p>
-      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>456</p>
-      <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>789</p>
-    </div> -->
+    <h5 class="align-center" style="color:grey;"><i>Credits to Jacqueline Young</i></h5>
+    <div class="w3-row-padding w3-center" style="margin-top:64px">
+      <div class="col-md-4 col-xs-12" style="padding-right: 40px!important;padding-left: 40px!important;">
+      <!-- <div class="thumbnail col-md-4 col-xs-12" style="margin-right:1em !important; padding:2em"> -->
+        <!-- Image Credit to: Noun Project -->
+        <img class="w3-margin-bottom" src="images/connect.jpg" style="wide:64px; height:70px;">
+        <p class="w3-xlarge">Get Connected</p>
+        <p class="w3-large" style="text-align:left; margin-bottom:20px;">CS Facebook Groups:</p>
+        <div class="list-type5">
+          <ol>
+            <li><a href="https://www.facebook.com/groups/LadiesStormHackathons/">Ladies Storm Hackathons </a></li>
+            <li><a href="https://www.facebook.com/groups/LSHJobs/">Ladies Storm Hackathons (Jobs / Internships) </a></li>
+            <li><a href="https://www.facebook.com/groups/hackathonhackers/">Hackathon Hackers </a></li>
+          </ol>
+        </div>
+        <p class="w3-large" style="text-align:left; margin-bottom:20px;">Mentorship:</p>
+        <div class="list-type5">
+          <ol>
+            <li><a href="https://docs.google.com/spreadsheets/d/16C7NPFSrGE_4mQdbKRP5-1ehFtUTd0Uy4-uL7eDGPFc/edit?usp=sharing">Female Mentor Contacts/Resources </a></li>
+            <li><a href="http://anitaborg.org/get-involved/systers/">Systers </a></li>
+            <li><a>CS Club Bigs/Littles! Matching happens in the fall, so keep an eye out! </a></li>
+          </ol>
+          </div>
+          <p class="w3-large" style="text-align:left; margin-bottom:20px;">Conferences:</p>
+          <div class="list-type5">
+            <ol>
+              <li><a href="http://ghc.anitaborg.org/2016-student-academic/scholarships">Grace Hopper (Usually in the Fall): Apply for scholarships! </a></li>
+              <li><a href="http://www.wecodeharvard.com/">WECode (End of February) </a></li>
+            </ol>
+            </div>
+        </div>
+      <div class="col-md-4 col-xs-12" style="padding-right: 40px!important;padding-left: 40px!important;">
+        <!-- Image Credit to: Noun Project -->
+        <img class="w3-margin-bottom" src="images/internship.jpg" style="wide:64px; height:70px;">
+        <p class="w3-xlarge">Jobs and Internships</p>
+        <p class="w3-large" style="text-align:left; margin-bottom:20px;">Resume Resources:</p>
+        <div class="list-type5">
+          <ol>
+            <li><a href="https://www.wellesley.edu/careereducation">Wellesley Career Education </a></li>
+            <li><a href="https://www.careercup.com/resume ">Careercup Resume Guide/Sample Resume </a></li>
+          </ol>
+        </div>
+        <p class="w3-large" style="text-align:left; margin-bottom:20px;">Application Preparation:</p>
+        <div class="list-type5">
+          <ol>
+            <li><a href="https://docs.google.com/document/d/1wGQU05baOuGUfNKQfqV11oBiZ4gYybDg2SvyM8Gk2QY/edit?usp=sharing">Big List of Internships </a></li>
+            <li><a href="http://www.intern.supply/">Another Big List of Companies </a></li>
+            <li><a href="https://docs.google.com/document/d/18XaP0nRU2fS-i-uxxWpvAy41hD_UF3rzjiJRouqF_Gc/edit?usp=sharing">First Year's Guide to Tech Internships </a></li>
+            <li><a href="https://breakoutlist.com/all">The Breakout List (Up and coming startups)</a></li>
+
+            <li><a href="https://medium.com/@qrazhan/cs-internship-recruiting-guide-aebb68912808#.b3s5k570f">CS Internship Recruiting Guide </a></li>
+          </ol>
+          </div>
+          <p class="w3-large" style="text-align:left; margin-bottom:20px;">Technical Interview Preparation:</p>
+          <div class="list-type5">
+            <ol>
+              <li><a href="https://www.reddit.com/r/cscareerquestions/comments/1jov24/heres_how_to_prepare_for_tech_interviews/">How to Prepare for Tech Interviews </a></li>
+              <li><a href="https://www.reddit.com/r/cscareerquestions/comments/2lzc4h/big_collection_of_interview_preparation_links/">Big Collection of Interview Prep Links </a></li>
+            </ol>
+            </div>
+      </div>
+      <div class="col-md-4 col-xs-12" style="padding-right: 40px!important;padding-left: 40px!important;">
+        <!-- Image Credit to: Noun Project -->
+        <img class="w3-margin-bottom" src="images/fun.jpg" style="wide:64px; height:70px;">
+        <p class="w3-xlarge">Fun Stuff</p>
+        <p class="w3-large" style="text-align:left; margin-bottom:20px;">Fun Coding Websites:</p>
+        <div class="list-type5">
+          <ol>
+            <li><a href="http://codingbat.com/">CodingBat (Java/Python Practice, Basic) </a></li>
+            <li><a href="https://codefights.com/signup/MM9wumPrWrWRmmki8/company-bots">CodeFights </a></li>
+            <li><a href="http://vim-adventures.com/">VIM Adventures (Learn VIM commands while playing a game) </a></li>
+          </ol>
+        </div>
+        <p class="w3-large" style="text-align:left; margin-bottom:20px;">Hackathons:</p>
+        <div class="list-type5">
+          <ol>
+            <li><a href="https://mlh.io/">Major League Hacking Events </a></li>
+          </ol>
+          </div>
+          <p class="w3-large" style="text-align:left; margin-bottom:20px;">How To:</p>
+          <div class="list-type5">
+            <ol>
+              <li><a href="https://medium.com/@Soengle/a-true-beginner-s-guide-to-building-a-website-from-scratch-da633c21202d#.vuvheiohi">Build a Website from Scratch </a></li>
+              <li><a href="https://try.github.io/levels/1/challenges/1">Learn Git in 15 Minutes </a></li>
+              <li><a href="https://www.railstutorial.org/book">Ruby on Rails Tutorial </a></li>
+            </ol>
+            </div>
+      </div>
+    </div>
+    <br>
+    <h3>For More Information, Please Follow <a href="https://www.facebook.com/Wellesley-CS-Club-856871510992038/" style="text-decoration: none; color:#a483dc;">Wellesley CS Club</a> on Facebook </h3>
   </div>
 </div>
 
