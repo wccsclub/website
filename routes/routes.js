@@ -24,7 +24,7 @@ const nodemailer = require("nodemailer");
 //     })
 // })
 
-router.post("/message", function(req, res) {
+router.post("https://wccsclub.github.io/website/message", function(req, res) {
   var data = req.body;
   console.log("DATA", data);
     // setup email data with unicode symbols
